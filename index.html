@@ -3,88 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Surprise</title>
+    <title>Valentine</title>
     <style>
-        body {
-            background: url('https://example.com/romantic-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            font-size: 50px;
-            animation: glow 1s infinite alternate;
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-            100% { text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff; }
-        }
-        .button {
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background: #ff6b6b;
-            color: white;
-            transition: transform 0.5s;
-        }
         .no-button {
-            cursor: pointer;
+            transition: transform 1.5s, opacity 1.5s;  /* Added transition delay and increased duration */
         }
     </style>
 </head>
 <body>
-    <h1>Happy Valentine's Day!</h1>
-    <audio autoplay loop>
-        <source src="https://www.bensound.com/bensound-romantic.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
-    <div>
-        <button class="button yes-button">Yes</button>
-        <button class="button no-button">No</button>
-    </div>
+    <h1>Will you be my Valentine awda malak a77? 💘</h1>
+    <button class="no-button">No</button>
     <script>
-        const noButton = document.querySelector('.no-button');
-        const yesButton = document.querySelector('.yes-button');
-
-        noButton.addEventListener('mouseover', () => {
-            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-            noButton.style.transform = `translate(${x}px, ${y}px)`;
-        });
-
-        yesButton.addEventListener('click', () => {
-            alert('Thank you for your love!');
-        });
-
-        // Falling hearts animation
-        setInterval(() => {
-            const heart = document.createElement('div');
-            heart.innerHTML = '❤️';
-            heart.style.position = 'absolute';
-            heart.style.fontSize = '24px';
-            heart.style.opacity = '1';
-            heart.style.left = Math.random() * window.innerWidth + 'px';
-            heart.style.top = '0px';
-            document.body.appendChild(heart);
-            let dropInterval = setInterval(() => {
-                heart.style.top = (parseInt(heart.style.top) + 5) + 'px';
-                heart.style.opacity -= 0.01;
-                if (parseInt(heart.style.top) > window.innerHeight) {
-                    clearInterval(dropInterval);
-                    document.body.removeChild(heart);
-                }
-            }, 100);
-        }, 1000);
+        // Animation logic here
     </script>
 </body>
 </html>
